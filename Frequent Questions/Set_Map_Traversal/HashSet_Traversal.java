@@ -2,7 +2,7 @@ import java.util.*;
 public class HashSet_Traversal {
 	public static void main (String[] args) {
 		Set<String> set = new HashSet<String>();
-		set.add("a");
+		set.add("f");
 		set.add("a");
 	    set.add("b");
 	    set.add("c");
