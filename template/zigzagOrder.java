@@ -37,5 +37,7 @@ public class zigzagOrder(TreeNode root) {
 				rst.add(tmp);
 			}
 		}
+
+		return result;
 	}
 }
