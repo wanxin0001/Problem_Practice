@@ -18,70 +18,48 @@ public class SquareNum1 {
     }
 
     public int squareNum(int left, int right) {
-        
-       if (right < 0 || right < left ) {
+        if (right < 0 || right < left) {
             return -1;
-       }
-       int start = 0;
-       if (left <= 0) {
-            start = 0;
-       } else {
-            start = searchLeft(left);
-       }
+        }
+        if (left < 0) {
+            left = 0;
+        }
 
-       int end = searchRight(left, right);
-       
-       
-       if (start > end) {
+        long leftSqrt = sqrt(left);
+        long rightSqrt = sqrt(right);
+
+        if (leftSqrt * leftSqrt < left) {
+            leftSqrt++;
+        }
+        //System.out.println(leftSqrt + " " + rightSqrt);
+        if (leftSqrt > rightSqrt) {
             return 0;
-       } else {
-            return end - start + 1;
-       }
-    }
-
-    private int searchLeft(int goal) {
-        int left = 1;
-        int right = goal;
-        while (left <= right ) {
-            int mid = (right - left) / 2 + left;
-            if (mid * mid == goal) {
-                return mid;
-            } else if (mid * mid < goal){
-                left = mid + 1;
-            } else {
-                right = mid - 1;
-            }
-        }
-
-        if (left * left == goal) {
-            return left;
         } else {
-            return left + 1;
+            return (int)(rightSqrt - leftSqrt + 1);
         }
        
 
     }
 
-    private int searchRight(int left, int goal) {
-        
-        int right = goal;
-        while (left <= right ) {
-            int mid = (right - left) / 2 + left;
-            if (mid * mid == goal) {
+    private long sqrt(int num) {
+        if (num == 1) {
+            return 1;
+        }
+
+        int low = 0;
+        int high = 1 + (num / 2);
+        while (low + 1 < high) {
+            int mid = low + (high - low) / 2;
+            long square = mid * mid;
+            if (square == num) {
                 return mid;
-            } else if (mid * mid < goal){
-                left = mid + 1;
+            } else if ( square < num ){
+                low = mid;
             } else {
-                right = mid - 1;
+                high = mid;
             }
         }
 
-        if (right * right == goal) {
-            return right;
-        } else {
-            return right - 1;
-        }
-       
-
+        return (long) low;
     }
 }

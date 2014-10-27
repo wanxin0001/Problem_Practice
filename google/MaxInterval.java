@@ -22,8 +22,10 @@ import java.util.*;
 public class MaxInterval {
 	public static void main(String[] args) {
 		int[] A = {1, 3, 2, 100};
+		int[] B = {Integer.MIN_VALUE, Integer.MAX_VALUE};
 		MaxInterval obj = new MaxInterval();
 		System.out.println(obj.MaxInterval(A));
+		System.out.println(obj.MaxInterval(B));
 	}
 	public int MaxInterval (int[] A) {
 		if (A == null || A.length <= 1) {
@@ -31,10 +33,12 @@ public class MaxInterval {
 		}
 
 		Arrays.sort(A);
-		int diff = Integer.MIN_VALUE;
+		long diff = (long) Integer.MIN_VALUE;
 		int pos = 0;
 		for (int i = 0; i < A.length - 1; i++) {
-			int temp = A[i + 1] - A[i];
+			long temp = (long) A[i + 1] - (long)A[i];
+
+			
 			if (diff < temp) {
 				diff = temp;
 				pos = i;
@@ -42,6 +46,6 @@ public class MaxInterval {
 
 		}
 
-		return A[pos] + diff / 2;
+		return A[pos] + (int) (diff / 2);
 	}
 }
