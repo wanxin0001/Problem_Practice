@@ -1,3 +1,11 @@
+/*
+Given sorted array and a target number, find the number of occurrences of the target number.
+Solution 2: binary search, 找到target然后往两边linear搜索直到不是target为止.
+Solution 3: 基于方法2，继续binary search，O(n)for worst case.
+然后问我2和3什么区别，方法2：O(logn)just for best case and O(n) for worst case, 方法3：需要左右边界分开搜O(2*logn)，3更好。最后想起来如果target找不到怎么办，return-1.
+
+*/
+
 public class NumOfValue {
 	public static void main(String[] args) {
 		int[] input = {-1, 2, 3, 4, 5, 5, 5};
