@@ -1,13 +1,6 @@
-1.  Java的multithread咋整
-3. kill man
-Anagram 
-Decode ways
-Sort Colors
-Convert Sorted List to Binary Search Tree
-Find the seed of a number. 
-Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seed for a given number.
+1.  Java的multithread咋整 (print and write code)
 
-2. Given sorted array and a target number, find the numberof occurrences of the target number.
+2. Given sorted array and a target number, find the number of occurrences of the target number.
 Solution 2: binary search, 找到target然后往两边linear搜索直到不是target为止.
 Solution 3: 基于方法2，继续binary search，O(n)for worst case.
 然后问我2和3什么区别，方法2：O(logn)just for best case and O(n) for worst case, 方法3：需要左右边界分开搜O(2*logn)，3更好。最后想起来如果target找不到怎么办，return-1.
@@ -94,3 +87,7 @@ Remove Duplicates from Sorted Array
 
 http://www.mathcs.emory.edu/~cheung/Courses/171/Syllabus/7-Sort/quick-sort2.html
 https://github.com/bakeraj4/In-Place-Merge-Sort/blob/master/mergeMain.java
+
+leetcode backtrack
+
+polygon (print)
