@@ -1,14 +1,7 @@
 1.  Java的multithread咋整 (print and write code)
-
-2. Given sorted array and a target number, find the number of occurrences of the target number.
-Solution 2: binary search, 找到target然后往两边linear搜索直到不是target为止.
-Solution 3: 基于方法2，继续binary search，O(n)for worst case.
-然后问我2和3什么区别，方法2：O(logn)just for best case and O(n) for worst case, 方法3：需要左右边界分开搜O(2*logn)，3更好。最后想起来如果target找不到怎么办，return-1.
-
-http://www.cnblogs.com/skywang12345/p/3310835.html
-
+http://www.cnblogs.com/skywang12345/p/3310835.html (print hashMap)
 LRU
-总结各种implementation
+
 如何实现word suggestion?写一个class。 
 R: Implement put and take in a blocking queue. 
 Y: 如何镜像一个tree，
@@ -41,7 +34,6 @@ Not difficult in algorithm, but it requires you to code and make it work like re
 
 http://www.careercup.com/question?id=14424684
 read 4k https://github.com/yxjiang/algorithms/blob/master/src/main/java/algorithm/basic/Read4K.java
- regex实现，
  mapreduce实现
  merge sort
  ， 最后一个是在一个string a 里找到所有string b的permutation 的 出现位置， 比如 a = abcdcba, b= abc, 那么返回0， 4
@@ -57,20 +49,7 @@ read 4k https://github.com/yxjiang/algorithms/blob/master/src/main/java/algorith
  Valid Palindrome
  How to implement a Queue
  multi-thread
- 数据结构的实现原理（楼主特意准备过，所以估计这个印象不错）
  binary tree last common ancester
-
-Use the shorest unique prefix to represent each word in the array
-input: ["zebra", "dog", "duck",”dot”]
-output: {zebra: z, dog: do, duck: du}
-
-.1point3acres缃�
-[zebra, dog, duck, dove]
-{zebra:z, dog: dog, duck: du, dove: dov}
-. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
-[bearcat, bear]
-{bearcat: bearc, bear: ""}
- http://www.1point3acres.com/bbs/thread-107220-2-1.html
 
  2Sum
 
@@ -86,7 +65,6 @@ Remove Duplicates from Sorted Array II
 Remove Duplicates from Sorted Array
 
 http://www.mathcs.emory.edu/~cheung/Courses/171/Syllabus/7-Sort/quick-sort2.html
-https://github.com/bakeraj4/In-Place-Merge-Sort/blob/master/mergeMain.java
 
 leetcode backtrack
 
