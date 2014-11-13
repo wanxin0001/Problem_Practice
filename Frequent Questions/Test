@@ -1,0 +1,12 @@
+/*
+Use the shorest unique prefix to represent each word in the array. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+input: ["zebra", "dog", "duck",”dot”]
+output: {zebra: z, dog: do, duck: du}
+
+[zebra, dog, duck, dove]
+{zebra:z, dog: dog, duck: du, dove: dov}.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+
+[bearcat, bear]
+{bearcat: bearc, bear: ""}. 1point3acres.com/bbs
+*/
+
