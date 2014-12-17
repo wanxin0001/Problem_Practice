@@ -44,7 +44,7 @@ public class MissRange {
 	}
 
 	public static void main(String[] args) {
-		int[] input = {0, 3, 5, 23, 24, 60, 99};
+		int[] input = {0, 1, 2,50 , 52, 75};
 		MissRange obj = new MissRange();
 		ArrayList<Range> result = obj.method(input);
 		for (Range item : result) {
